@@ -1,4 +1,5 @@
-
+const {Schema , model} = require('mongoose')
+const mongoose = require('mongoose')
 
 const userSchema = new Schema({
     fullName: {
@@ -23,3 +24,7 @@ const userSchema = new Schema({
         enum: ['recruiter', 'student'],
     }
 })
+
+const User = model("user", userSchema)
+
+module.exports = User
